@@ -1,5 +1,7 @@
 # Sabre Fencing Win & Scoreline Prediction (2023/2024 Season)
 
+## 1. Introduction and objectives
+
 Predict match outcome and scoreline by assigning Elo ratings to fencers and using an ensemble of Random Forest and XGBoost models to predict win probabilities and expected scorelines for head-to-head matches.
 
 The project uses data from the 2023/2024 season, including:
@@ -17,9 +19,22 @@ The goal is to provide:
 
 ## 2. Data Structure
 
-The project uses four main datasets for each tournament which are scrapped from FIE's website.
+The project uses **four main datasets** for each tournament, which are **scraped from the FIE website using a Python script**.  
 
+The Python scraper works as follows:  
+- It uses a **headless Chrome browser** that runs in the background without opening a window.  
+- The script loops through a predefined list of competition URLs.  
+- For each competition, **Selenium** mimics human behavior by clicking on the **Athletes**, **Results**, and **Final Ranking** tabs to access the data.  
+- The tables on each tab are extracted and saved as **CSV files**.
+
+**Challenges and considerations:**  
+- Web pages load asynchronously, so `time.sleep` is used to ensure the content is fully loaded before reading it.  
+- CSV files follow a **standardized naming format**: `competitionType_season_urlID` to keep them organized.
+- The following subsections show the columns and details of the CSV files scraped for each tournament.
+
+  
 ### **2.1 Elimination Rounds**
+
 | Column            | Description                                   |
 |------------------|-----------------------------------------------|
 | Round             | Round number in elimination (e.g., 32, 16)   |
@@ -70,12 +85,12 @@ This section handles preprocessing the raw datasets, creating an elo class for r
 - Removes extra spaces, Byte Order Mark characters found in CSV, and zero-width spaces.
 - Ensures uniform column names across datasets.
 
-### **3.1 loading dataset**
+### **3.2 loading dataset**
 - It loads the 4 datasets mentioned in section 2 for each competition as pandas dataframes and encodes with utf-8-sig so that BOM characters are removed
 - Clean column names function is applied to all 4 pandas data frames
 - Forces elimination round dataframes to fixed columns and validate the structure
   
-### **3.1 dataframe cleaning**
+### **3.3 dataframe cleaning**
 - Loops through the 4 dataframes, ensures that the columns are there and drops any unexpected columns
 - Handles missing rows where names, winner or scores by dropping
 - Standardise all variables to their supposed data type (round number to integer, names to string)
@@ -110,18 +125,18 @@ The definition of the feature is listed below:
 
 
 ### **4.2 Main execution when the datasets are uploaded**
-- 2 lists are created: all_features to store the feature tables for each tournament and all_elimination_dfs to store the cleaned elimination_dfs for each tournament
-- Loop is created to prompt user to upload the 4 required files for each tournament
+- 2 lists are created: all_features to store the feature tables for each tournament, and all_elimination_dfs to store the cleaned elimination_dfs for each tournament
+- A loop is created to prompt the  user to upload the 4 required files for each tournament
 - Once the 4 files are uploaded, the data is cleaned using the clean_data function in section 3
-- Lastly, the feature tables and elimination results from each tournament are merged into a big dataset respectively
+- Lastly, the feature tables and elimination results from each tournament are merged into a big dataset, respectively
 
 
 ## 5. Machine Learning Model Training
 
-This section trains RandomForest and XGBoost models to predict win probability and score differences using fencer performance metrics differences as features which are standardized and hyperparameter tuned with 5-fold GridSearchCV (cross-validation).
+This section trains RandomForest and XGBoost models to predict win probability and score differences using fencer performance metrics differences as features which are standardized and hyperparameter-tuned with 5-fold GridSearchCV (cross-validation).
 
 ### **5.1 Dataset Preparation**
-Creates a head to head dataset and calculates the feature differences in both fencers and add the win outcome and scoreline columns of both fencers
+Creates a head-to-head dataset and calculates the feature differences in both fencers, and adds the win outcome and scoreline columns of both fencers
 
 - Features (`X`):  
   - `Elo_Diff`  
@@ -135,14 +150,14 @@ Creates a head to head dataset and calculates the feature differences in both fe
   - `y_win` = Match Result (1 if Fencer A wins, 0 if Fencer B wins)  
   - `y_score_diff` = Score Difference
 
-- Train-test split: 80% training, 20% testing and random_state=42 for reproducible splits
-- Standardize features using `StandardScaler` to zero mean and unit variance as we will be using gradient-based models like XGBoost
+- Train-test split: 80% training, 20% testing, and random_state=42 for reproducible splits
+- Standardize features using `StandardScaler` to zero mean and unit varianc,e as we will be using gradient-based models like XGBoost
 
 ### **5.2 Models**
-- Initialise hyperparameter tuning for both models using 5-fold cross validation to find the best parameters.
-- The model with the best parameters are fitted onto the training data to predict and compare with test set data
+- Initialise hyperparameter tuning for both models using 5-fold cross-validation to find the best parameters.
+- The model with the best parameters is fitted onto the training data to predict and compare with the test set data
 - Mean Squared Error is used for model evaluation
-- This setup is used for the first target variable y_win and then repeated with the target variable changed to y_score_diff
+- This setup is used for the first target variable, y_wi,n and then repeated with the target variable changed to y_score_diff
   
 1. **RandomForestRegressor**
    - For predicting win probability (`y_win`)
