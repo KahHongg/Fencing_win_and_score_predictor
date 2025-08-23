@@ -1,0 +1,181 @@
+Rk.,Name,Age,V,M,TD,TR,Ind.,Diff.,Q
+1,SARON Mitchell,24,6,6,30,3,1,27,Qualified
+2,PATRICE Sebastien,25,6,6,30,4,1,26,Qualified
+3,TORRE Pietro,23,6,6,30,5,1,25,Qualified
+4,BIBI Eliott,25,6,6,30,8,1,22,Qualified
+5,HEATHCOCK Colin,19,6,6,30,10,1,20,Qualified
+5,KIM Junho,31,6,6,30,10,1,20,Qualified
+5,NERI Matteo,26,6,6,30,10,1,20,Qualified
+5,YILDIRIM Enver,29,6,6,30,10,1,20,Qualified
+9,BONAH Raoul,26,6,6,30,11,1,19,Qualified
+9,CAVALIERE Dario,28,6,6,30,11,1,19,Qualified
+11,ALSHAMLAN Yousef,26,5,5,25,6,1,19,Qualified
+12,DO Gyeongdong,25,6,6,30,12,1,18,Qualified
+12,REPETTI Giovanni,36,6,6,30,12,1,18,Qualified
+14,DODDO Andrew,26,6,6,30,13,1,17,Qualified
+14,PARK Sangwon,24,6,6,30,13,1,17,Qualified
+14,WILLIAMS Grant,28,6,6,30,13,1,17,Qualified
+17,TSAP Yuriy,32,6,6,30,15,1,15,Qualified
+18,KOKUBO Mao,22,6,6,30,17,1,13,Qualified
+19,ARFA Fares,30,6,6,30,20,1,10,Qualified
+20,SINGH Karan Singh,26,5,6,29,13,0.833,16,Qualified
+21,LIN Xiao,24,5,6,27,11,0.833,16,Qualified
+22,BERRE' Enrico,32,5,6,28,13,0.833,15,Qualified
+23,LIANG Jianhao,28,5,6,29,15,0.833,14,Qualified
+23,ZMAU Alexandru,23,5,6,29,15,0.833,14,Qualified
+25,DEARY William,27,5,6,28,14,0.833,14,Qualified
+25,ILIASZ Nicolas,33,5,6,28,14,0.833,14,Qualified
+27,KEMPF Lorenz,28,5,6,27,13,0.833,14,Qualified
+28,AMER Mohamed,27,5,6,28,15,0.833,13,Qualified
+29,CUELLAR Sebastian,28,5,6,29,17,0.833,12,Qualified
+30,MORRILL William,18,5,6,28,16,0.833,12,Qualified
+30,NUCCIO Riccardo,33,5,6,28,16,0.833,12,Qualified
+32,DECSI Tamas,42,5,6,27,16,0.833,11,Qualified
+32,HOSHINO Kento,27,5,6,27,16,0.833,11,Qualified
+32,IAM Jethro,31,5,6,27,16,0.833,11,Qualified
+35,YOSHIDA Kento,32,5,6,26,15,0.833,11,Qualified
+36,DOLEGIEWICZ Filip,24,5,6,28,18,0.833,10,Qualified
+36,SHEN Chenpeng,23,5,6,28,18,0.833,10,Qualified
+38,STREETS Kaito,31,5,6,26,16,0.833,10,Qualified
+39,BAZADZE Beka,35,5,6,29,20,0.833,9,Qualified
+40,SARKISSYAN Artyom,25,5,6,26,17,0.833,9,Qualified
+40,YAGODKA Andriy,36,5,6,26,17,0.833,9,Qualified
+42,BAHER ARASBARAN Farzad,31,5,6,27,19,0.833,8,Qualified
+43,KACZKOWSKI Krzysztof,27,5,6,26,19,0.833,7,Qualified
+44,FRUMGARZTS David,21,4,5,24,16,0.8,8,Qualified
+45,TOKUNAN Kenta,37,4,5,23,15,0.8,8,Qualified
+46,DI TELLA Pascual Maria,29,4,5,21,13,0.8,8,Qualified
+47,SEEFELD Eric Simon,23,4,5,24,17,0.8,7,Qualified
+48,HEATHCOCK Antonio,22,4,6,28,15,0.667,13,Qualified
+49,NABIYEV Zhanat,24,4,6,27,14,0.667,13,Qualified
+50,GEMESI Csanad,38,4,6,26,14,0.667,12,Qualified
+51,LAMBERT Maxence,31,4,6,25,14,0.667,11,Qualified
+52,YAN Yinghui,27,4,6,28,18,0.667,10,Qualified
+53,MACKIEWICZ Andrew,29,4,6,27,17,0.667,10,Qualified
+54,NITU Radu,20,4,6,25,15,0.667,10,Qualified
+55,SEITZ Tom,31,4,6,28,19,0.667,9,Qualified
+55,URSACHI Razvan,27,4,6,28,19,0.667,9,Qualified
+57,ALMUTAIRI Adel,26,4,6,26,17,0.667,9,Qualified
+58,FOTOUHI Mohammad,34,4,6,25,16,0.667,9,Qualified
+59,STATSENKO Oleksiy,31,4,6,24,15,0.667,9,Qualified
+60,GALGOCZY Tamas,28,4,6,24,16,0.667,8,Qualified
+61,DINU Nicholas,23,4,6,23,15,0.667,8,Qualified
+62,DRAGOMIR George,26,4,6,25,18,0.667,7,Qualified
+63,SUNG Hyeonmo,25,4,6,24,17,0.667,7,Qualified
+64,REA Mattia,23,4,6,23,16,0.667,7,Qualified
+65,AYMURATOV Musa,20,4,6,26,20,0.667,6,Qualified
+65,KUMARESAN PADMA Gisho Nidhi,32,4,6,26,20,0.667,6,Qualified
+67,GORDON Shaul,30,4,6,24,18,0.667,6,Qualified
+68,MOATAZ Adham,22,4,6,26,21,0.667,5,Qualified
+69,CAUCHON Francois,25,4,6,25,20,0.667,5,Qualified
+69,RAHBARI Mohammad,33,4,6,25,20,0.667,5,Qualified
+71,BRAVO Inaki,27,4,6,27,23,0.667,4,Qualified
+72,SCHNEIDER Benno,31,4,6,26,22,0.667,4,Qualified
+73,GARRIGUE Remi,20,4,6,24,20,0.667,4,Qualified
+73,YAMAN Furkan,18,4,6,24,20,0.667,4,Qualified
+75,MADRIGAL Santiago,21,4,6,21,17,0.667,4,Qualified
+76,METHNER Philipp,21,4,6,24,21,0.667,3,Qualified
+77,ARMIJO Gabriel,30,4,6,22,19,0.667,3,Qualified
+78,LEUNG Tin Ching,23,4,6,25,23,0.667,2,Qualified
+79,BOUREAU Paco,24,4,6,23,21,0.667,2,Qualified
+79,KINDLER Frederic,26,4,6,23,21,0.667,2,Qualified
+81,SZCZEPANIK Piotr,24,4,6,21,19,0.667,2,Qualified
+82,CABALLERO Rogelio,24,4,6,23,22,0.667,1,Qualified
+82,CHANG Chi Hin Cyrus,32,4,6,23,22,0.667,1,Qualified
+84,ALAMR Mohammed,21,4,6,22,21,0.667,1,Qualified
+84,RABB Krisztian,23,4,6,22,21,0.667,1,Qualified
+86,ANASIZ Muhammed,26,4,6,22,22,0.667,0,Qualified
+87,PLATONOV Bogdan,28,4,6,22,24,0.667,-2,Qualified
+88,LOW Ho Tin,33,3,5,22,13,0.6,9,Qualified
+89,MASTRULLO Marco,21,3,5,22,15,0.6,7,Qualified
+90,MATEEV Andri Nikolaysson,25,3,5,18,15,0.6,3,Qualified
+91,CANTINI Edoardo,21,3,6,22,15,0.5,7,Qualified
+92,COHEN Josef,26,3,6,26,20,0.5,6,Qualified
+93,ARCHVADZE Vakhtangi,23,3,6,24,20,0.5,4,Qualified
+93,RIKITAKE Yuto,23,3,6,24,20,0.5,4,Qualified
+95,ZEA Gibran,28,3,6,23,19,0.5,4,Qualified
+96,GIRAULT Evann Jean Abba,20,3,6,25,22,0.5,3,Qualified
+96,KUZMIN Leon,23,3,6,25,22,0.5,3,Qualified
+98,DUBARRY Baptiste,28,3,6,24,21,0.5,3,Qualified
+98,KAJOR Krzysztof,22,3,6,24,21,0.5,3,Qualified
+100,CRESPO Christian,26,3,6,23,20,0.5,3,Qualified
+100,HRYCIUK Szymon,22,3,6,23,20,0.5,3,Qualified
+102,HERNANDEZ CABALLERO Andres,29,3,6,22,19,0.5,3,Qualified
+102,LUCCHETTI Stefano Ivan,28,3,6,22,19,0.5,3,Qualified
+104,TCHEISHVILI Nikoloz,24,3,6,24,22,0.5,2,Qualified
+105,TSUMORI Shido,21,3,6,23,21,0.5,2,Qualified
+106,CIDU Matei,24,3,6,23,22,0.5,1,Qualified
+107,PATRICE Jean-Philippe,28,3,6,22,21,0.5,1,Qualified
+108,CIDU Casian,19,3,6,21,20,0.5,1,Qualified
+109,ROMERO Eliecer,30,3,6,24,24,0.5,0,Qualified
+110,ALLEN Samuel,21,3,6,23,23,0.5,0,Qualified
+111,PALACIOS MURILLO Mario Alberto,29,3,6,22,22,0.5,0,Qualified
+112,FLOREZ Carlos,24,3,6,20,20,0.5,0,Qualified
+112,REN Junming,24,3,6,20,20,0.5,0,Qualified
+114,HALLIWELL Barnaby,25,3,6,22,23,0.5,-1,Qualified
+115,TAFLAN Ahmet Turgut,22,3,6,21,22,0.5,-1,Qualified
+116,MARTINE Thomas,26,3,6,23,25,0.5,-2,Qualified
+117,AYMAN Mostafa,27,3,6,21,23,0.5,-2,Qualified
+117,CHANG Hoi Chun,24,3,6,21,23,0.5,-2,Qualified
+119,BONAH Luis,28,3,6,20,22,0.5,-2,Qualified
+119,SHINDE Abhay Krishna,23,3,6,20,22,0.5,-2,Qualified
+121,SATTARKHAN Nazarbay,27,3,6,19,21,0.5,-2,Qualified
+122,SCHLAFFER Leon,24,3,6,22,25,0.5,-3,Qualified
+123,ALVAREZ DURAN Pablo,23,3,6,19,22,0.5,-3,Qualified
+124,MONSALVA Roberto,24,3,6,18,21,0.5,-3,Qualified
+125,ALMUTAIRI Ziyad,20,3,6,18,22,0.5,-4,Qualified
+126,HAYNES Luke,24,3,6,20,25,0.5,-5,Qualified
+127,ALQUDIHI Ahmed,27,3,6,19,25,0.5,-6,Qualified
+127,XU Yingming,33,3,6,19,25,0.5,-6,Qualified
+129,WONG Tzer Chyuan,31,3,6,19,26,0.5,-7,Qualified
+130,MORAN Yago,22,3,6,18,26,0.5,-8,Qualified
+130,YOSHIDA Tamon,24,3,6,18,26,0.5,-8,Qualified
+132,ALMANSAF Abdullah,21,3,6,16,25,0.5,-9,Qualified
+133,HORVATH Gergo,23,2,5,18,18,0.4,0,Qualified
+133,PATINO Emir,24,2,5,18,18,0.4,0,Qualified
+135,DI MARTINO Pietro Jose,27,2,5,19,22,0.4,-3,Qualified
+136,PEKELMAN Bruno,24,2,5,14,17,0.4,-3,Qualified
+137,HO Sze Long Aaron,29,2,5,18,22,0.4,-4,Qualified
+138,MILLER Curtis,33,2,5,15,19,0.4,-4,Qualified
+139,BENEDICT Nicolaus,25,2,5,14,21,0.4,-7,Qualified
+140,KAKAURIDZE Goga,24,2,6,25,24,0.333,1,Qualified
+141,CORREA VILA Luis,29,2,6,25,25,0.333,0,Qualified
+142,CHOW Chung Hei,23,2,6,21,22,0.333,-1,Qualified
+142,COLLEAU Charles,29,2,6,21,22,0.333,-1,Qualified
+144,COZMULEANU Codrin,28,2,6,20,21,0.333,-1,Qualified
+145,KATO Hibiki,23,2,6,21,23,0.333,-2,Qualified
+146,KOSSUTH Balint,28,2,6,23,26,0.333,-3,Qualified
+147,HA Hansol,31,2,6,21,24,0.333,-3,Qualified
+147,RODRIGUEZ Abraham,38,2,6,21,24,0.333,-3,Qualified
+149,ELARABY Mazen,23,2,6,19,22,0.333,-3,Qualified
+150,AYALA Julian,33,2,6,17,20,0.333,-3,Qualified
+151,KALENDER Muhammed Furkan,22,2,6,22,26,0.333,-4,Qualified
+152,CHAN Lok Hei Royce,21,2,6,19,23,0.333,-4,Qualified
+153,ZAHEDI Nima,27,2,6,21,26,0.333,-5,Qualified
+154,MESSICA Lucas Maurice Andre,28,2,6,20,25,0.333,-5,Qualified
+155,MORALES Josue,27,2,6,19,24,0.333,-5,Qualified
+155,WESTERN REYES Rafael,34,2,6,19,24,0.333,-5,Qualified
+157,BAHAMONDE Manuel,30,2,6,18,23,0.333,-5,Qualified
+158,HMISSI Amenallah,22,2,6,22,28,0.333,-6,Qualified
+159,FERNANDEZ BLANCO Oscar,27,2,6,20,26,0.333,-6,Qualified
+159,SHIRAI Hiromu,29,2,6,20,26,0.333,-6,Qualified
+161,MOGG Leopold,25,2,6,18,24,0.333,-6,Qualified
+162,TSUBO Hayato,22,2,6,17,23,0.333,-6,Qualified
+163,FLOREZ Jaime,20,2,6,20,28,0.333,-8,Qualified
+164,VERDE Rodrigo,19,2,6,19,27,0.333,-8,Qualified
+165,DICK Jadryn,29,2,6,17,25,0.333,-8,Qualified
+166,GOUGOULIAS Olympios,23,2,6,16,24,0.333,-8,Qualified
+166,LOPEZ DE GUERENU Jorge,24,2,6,16,24,0.333,-8,Qualified
+168,MAMUTOV Sherzod,23,2,6,16,25,0.333,-9,Qualified
+169,CROMIE Max,22,2,6,16,26,0.333,-10,Qualified
+169,DAULETNAZAROV Azizbek,20,2,6,16,26,0.333,-10,Qualified
+171,ALPAIDZE Mikhail,22,2,6,13,28,0.333,-15,Qualified
+172,GELINAS Marc,28,1,5,12,21,0.2,-9,Qualified
+173,HOWES Nicholas,26,1,6,24,27,0.167,-3,Qualified
+174,WEI Andrew,24,1,6,22,28,0.167,-6,Qualified
+175,OLANGUA Asier,21,1,6,19,25,0.167,-6,Qualified
+176,ALVAREZ Ricardo,27,1,6,20,27,0.167,-7,Qualified
+177,KUTCHUKHIDZE Lasha,20,1,6,19,26,0.167,-7,Qualified
+178,HO Ian,21,1,6,20,28,0.167,-8,Qualified
+179,COVALIU Vlad,19,1,6,18,26,0.167,-8,Qualified
+179,HERRANZ Carlos,23,1,6,18,26,0.167,-8,Qualified
