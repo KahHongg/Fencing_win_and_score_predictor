@@ -218,7 +218,7 @@ This section handles interactive user input to select fencers and display head-t
   6. Exit loop if user answers `no` or types `exit`.
 
 
-### 7.3 Example Interaction
+### 7.3 Sample Output
 ```python
 Fencer A (type part of the name or 'all' to see full list, 'exit' to quit): mao
 1. Kokubo Mao
