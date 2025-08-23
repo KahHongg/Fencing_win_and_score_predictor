@@ -6,7 +6,7 @@ The project uses data from the 2023/2024 season, including:
 
 - **Elimination rounds**: Scores and winners of head-to-head matches.
 - **Pool results**: Performance in preliminary rounds.
-- **Final rankings**: Official FIE rankings.
+- **Final rankings**: Official FIE rankings for the 2023/2024 season and their final ranking for the competitions used in the datasets.
 - **Athlete data**: Personal information like age, nationality, and points.
 
 The goal is to provide:
@@ -17,7 +17,7 @@ The goal is to provide:
 
 ## 2. Data Structure
 
-The project uses four main datasets for each tournament:
+The project uses four main datasets for each tournament which are scrapped from FIE's website.
 
 ### **2.1 Elimination Rounds**
 | Column            | Description                                   |
@@ -62,68 +62,58 @@ The project uses four main datasets for each tournament:
 | Age         | Athlete's age |
 | Nationality | Athlete's nationality |
 
-## 3. Data Cleaning & Feature Engineering
+## 3. Elo class creations, Data Cleaning & Feature Engineering
 
-This section handles preprocessing the raw datasets and creating features for ML models.
+This section handles preprocessing the raw datasets, creating an elo class for rating and creating features for ML models.
 
-### **3.1 Cleaning Column Names**
-- Removes extra spaces, BOM characters, and zero-width spaces.
+### **3.1 Cleaning Column Names function**
+- Removes extra spaces, Byte Order Mark characters found in CSV, and zero-width spaces.
 - Ensures uniform column names across datasets.
 
-### **3.2 Elimination Data Processing**
-- Converts fencer names and winner to title-case strings.
-- Drops rows with missing critical values (`Fencer A/B Name`, `Winner`, `Fencer A/B Score`).
-- Converts `Round` to integer (extracts numeric part).
-- Converts `Fencer A/B Score` to float.
+### **3.1 loading dataset**
+- It loads the 4 datasets mentioned in section 2 for each competition as pandas dataframes and encodes with utf-8-sig so that BOM characters are removed
+- Clean column names function is applied to all 4 pandas data frames
+- Forces elimination round dataframes to fixed columns and validate the structure
+  
+### **3.1 dataframe cleaning**
+- Loops through the 4 dataframes, ensures that the columns are there and drops any unexpected columns
+- Handles missing rows where names, winner or scores by dropping
+- Standardise all variables to their supposed data type (round number to integer, names to string)
+- created lists to organise top 16 fencers who are fencing in the main tableau and the rest who have to compete for the remaining 48 spots in preliminaries
 
-### **3.3 Pool Data Processing**
-- Converts columns like `V`, `M`, `TD`, `TR`, `Diff.` to integers.
-- Converts `Ind.` to float and `Q` to string.
-- Cleans `Name` to title-case.
+### **Elo class creation and elo calculation**
+ - Elo is used to calculate relative skill level between fencer and all are given a base elo of 1000 points
+ - A default value K=5 is set and it controls the sensitivity of rating changes
+ - Expected score returns a probability that player A wins and actual score returns the probability of the actual outcome (1 = win, 0 = Lose)
+ - An update rating function then uses the difference of these scores multiplied by the K factor to calculate the new elos of both fencers.
+ - Elo is calculated as it it loops through every elimination bout in the eliminations df and updates the elo rating of the fencers. An elo_df is created with the fencer's final elo and a dictionary of fencer_elos for easy lookup
 
-### **3.4 Ranking and Athletes Data**
-- Converts `Name` to title-case.
-- Converts `Rank`, `Age` to int, `Points` to float, `Nationality` to string.
-
-### **3.5 Top 16 and Preliminary Athletes**
-- `top_16_athletes`: Top 16 athletes based on world rank.
-- `pool_qualifiers`: Top 16 athletes from pool results.
-- `main_round_athletes = top_16_athletes + pool_qualifiers`
-- `preliminary_athletes`: All other athletes not in main round.
-
-### **3.6 Feature Engineering**
-- **Pool Performance:** Win rate (`V/M`) and average rank.
-- **Elimination Performance:** Count of wins, total matches, elimination win rate.
-- **Elo Ratings:** Initialized from ranking, updated after each elimination match.
-- **Final Features per Fencer:**
-  - `Win_Rate` (from pool)
-  - `Elim_Wins`
-  - `Elim_Matches`
- 
 ## 4. Head-to-Head Feature Engineering
 
 This section creates features for each match between two fencers based on their individual statistics.
 
 ### **4.1 Feature Calculation for Each Match**
-For each elimination match:
-- `Elo_Diff` = Fencer A Elo - Fencer B Elo
-- `Win_Rate_Diff` = Fencer A Pool Win Rate - Fencer B Pool Win Rate
-- `Elim_Win_Rate_Diff` = Fencer A Elim Win Rate - Fencer B Elim Win Rate
-- `Rank_Diff` = Fencer A Rank - Fencer B Rank
-- `Elim_Wins_Diff` = Fencer A Elim Wins - Fencer B Elim Wins
-- `IsPreliminary_A` = 1 if Fencer A is a preliminary fencer, else 0
-- `IsPreliminary_B` = 1 if Fencer B is a preliminary fencer, else 0
-- `Result` = 1 if Fencer A wins, 0 if Fencer B wins
-- `Score_Diff` = Fencer A Score - Fencer B Score
 
-### **4.2 Output**
-- `head_to_head_df`: DataFrame where each row corresponds to a match and contains the features listed above.
-- Ready to be used as input for ML models.
+A dataframe is created with each row being a fencer and each column representing a feature.
 
-  - `Elim_Win_Rate`
-  - `Elo`
-  - `Rank`
-  - `IsPreliminary` (1 if in preliminary round, 0 otherwise)
+The definition of the feature is listed below:
+- **V** → Number of victories in pool round.  
+- **M** → Total pool matches fenced.  
+- **Rk.** → Average pool ranking.  
+- **Win_Rate** → Pool win rate (`V / M`).  
+- **Elim_Wins** → Number of wins in elimination rounds.  
+- **Elim_Matches** → Total elimination matches fenced.  
+- **Elo** → Elo rating after elimination rounds.  
+- **Rank** → Official FIE ranking.  
+- **Elim_Win_Rate** → Elimination win rate (`Elim_Wins / Elim_Matches`).  
+- **IsPreliminary** → 1 if fencer came from preliminary rounds, 0 otherwise.
+
+
+### **4.2 Main execution when the datasets are uploaded**
+- 2 lists are created: all_features to store the feature tables for each tournament and all_elimination_dfs to store the cleaned elimination_dfs for each tournament
+- Loop is created to prompt user to upload the 4 required files for each tournament
+- Once the 4 files are uploaded, the data is cleaned using the clean_data function in section 3
+- Lastly, the feature tables and elimination results from each tournament are merged into a big dataset respectively
 
 
 ## 5. Machine Learning Model Training
